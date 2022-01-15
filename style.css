@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header, main{
+    width: 80vw;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+}
+nav .logo{
+    font-size: 30px;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    justify-content: end;
+}
+nav ul li{
+    list-style: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+nav ul li a{
+    text-decoration: none;
+    padding: 10px 30px;
+}
+/* header column start here */
+.header{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_left{
+    flex-basis: 600px;
+}
+.header_right{
+    flex-basis: 400px;
+    position: relative;
+}
+.header_left h2{
+    font-size: 60px;
+}
+.header_left p{
+    font-size: 18px;
+    margin-top: 25px;
+}
+.header_left button{
+    padding: 15px 40px;
+    margin-top: 30px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(216, 12, 107);
+
+}
+.header_left button i{
+    padding-left: 10px;
+}
+.header_right img{
+    position: absolute;
+    margin-top: -200px;
+}
+.header_right .img2{
+    animation: animate 3s ease-in-out alternate infinite;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-35px);
+    }
+}
+
+#brand_section{
+    height: auto;
+    padding-top: 100px;
+}
+.border{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(124, 123, 123);
+}
+.brand_container{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.brand{
+}
+/* header column end here */
+/* main section css start here */
+#product_section{
+    height: 100%;
+    padding: 50px;
+    margin-top: 100px;
+}
+#product_section button{
+    float: right;
+    background: none;
+    border: none;
+    color: rgb(216, 12, 107);
+    margin-top: 40px;
+    font-size: 18px;
+}
+.section_title{
+    text-align: center;
+    font-size: 25px;
+    padding: 20px 0;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.product_collection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.product{
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(182, 182, 182);
+    transition: 0.8s ease;
+}
+.product:hover img{
+    transform: scale(1.1);
+}
+.product img{
+    width: 100%;
+    border-radius: 10px;
+}
+.product_details{
+    width: 100%;
+}
+.product_details h2{
+    font-size: 28px;
+    margin: 15px 0;
+}
+.product_details h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.product_details p i{
+    color: rgb(247, 193, 17);
+}
+
+/* customer section css start here */
+.our_customer_container{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+.our_customer{
+    flex-basis: 320px;
+    text-align: center;
+}
+.our_customer img{
+    width: 80px;
+    height: 80px;
+}
+.our_customer h2{
+    font-size: 20px;
+    margin: 20px 0;
+}
+.our_customer p{
+    font-size: 17px;
+    line-height: 28px;
+}
+/* customer section css end here */
+/* main section css end here */
+
+/* footer style start here */
+.footer_content{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    color: #fff;
+    padding-top: 50px;
+    background-color: rgb(1, 1, 34);
+}
+.footer_content h2{
+    font-size: 30px;
+}
+.footer_content p{
+    font-size: 18px;
+    line-height: 40px;
+}
+.footer_content p i{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px 10px;
+    background-color: rgba(209, 209, 209, 0.2);
+    border-radius: 20px;
+    margin: 0 10px;
+
+}
+/* footer style end here */
+
+
+/* media query start here */
+@media only screen and (max-width: 600px) {
+    .header{
+        width: 100%;
+        height: 100vh;
+        flex-direction: column-reverse;
+        margin-top: 300px;
+        justify-content: center;
+    }
+    .header_left{
+        width: 100%;
+        height: 50vh;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header_right{
+        padding: 30px;
+        width: 100%;
+        bottom: 0;
+    }
+    .header_right img{
+        width: 350px;
+    }
+    .header_left h2{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .product{
+        width: 100%;
+    }
+    .product_collection{
+        grid-template-columns: 1fr;
+    }
+    .our_customer{
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header_left{
+        width: 100%;
+    }
+    .header_right{
+        width: 100%;
+        bottom: 0;
+    }
+    .header_right img{
+        
+    }
+    .our_customer_container{
+        justify-content: center;
+    }
+    .product{
+        min-width: 350px;
+    }
+    .product_collection{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+@media only screen and (min-width: 992px) {
+    .header_right img{
+        width: 400px;
+    }
+    .product_collection{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* media query end here */
+
+
+
+
+
+
+
